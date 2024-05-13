@@ -1,0 +1,81 @@
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    /* Added padding for better spacing on smaller screens */
+}
+
+.hero-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.hero-container h1,
+.hero-container p {
+    z-index: 1;
+    color: white;
+    font-size: 50px;
+    margin: 200px;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+    margin: 0.5em 0;
+
+}
+
+.hero-container button {
+    z-index: 1;
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #470A1C;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    /* Adds subtle shadow for depth */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effects */
+}
+
+.hero-container button:hover {
+    background-color: #5E0B24;
+    /* Darker shade on hover for better interaction feedback */
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        height: 140vw;
+        width: auto;
+    }
+
+    .hero-container p {
+        z-index: 1;
+        color: white;
+        font-size: 50px;
+        margin: 200px;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+        margin: 0.5em 0;
+        text-align: center;
+    }
+
+    .hero-container video {
+        height: 610px;
+    }
+
+    .hero-container h1 {
+        margin-top: -200px;
+    }
+
+}
